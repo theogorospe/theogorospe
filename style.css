@@ -331,7 +331,11 @@ section {
     min-width: 250px;
     flex: 1;
     background: none;
-
+    border-radius: 5px;
+    padding-bottom: 30px;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
     text-align: center;
 }
 
