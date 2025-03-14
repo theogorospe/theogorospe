@@ -8,23 +8,21 @@ function toggleMenu() {
 
 /*PROJECT PAGE GIF*/
 document.addEventListener("DOMContentLoaded", function () {
-    const projects = document.querySelectorAll(".project");
+    const projectImages = document.querySelectorAll(".project-image");
 
-    projects.forEach((project) => {
-        const img = project.querySelector(".project-image");
+    projectImages.forEach((img) => {
         const originalSrc = img.getAttribute("src"); 
         const gifSrc = img.getAttribute("data-gif"); 
 
-        project.addEventListener("mouseenter", () => {
+        img.addEventListener("mouseenter", () => {
             img.src = gifSrc; 
         });
 
-        project.addEventListener("mouseleave", () => {
+        img.addEventListener("mouseleave", () => {
             img.src = originalSrc; 
         });
     });
 });
-
 
 
 /*CONTACT PAGE VALIDATION */
