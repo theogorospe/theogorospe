@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">MY PORTFOLIO</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#profile">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <img id="themeToggle" src="assets/sleep-day.png" alt="Dark Mode Toggle">
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Theo Gorospe</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="assets/profile-pic-round.png" alt="my profile picture">
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Theo Gorospe</h1>
+            <p class="section__text__p2">Student at Informatics</p>
+            <div class="btn-container">
+                <button class="btn btn-color-2" onclick="window.open('./assets/cv-sample.pdf')">
+                    Download CV
+                </button>
+                <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                    Contact Me
+                </button>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+            <div class="section__pic-container">
+                <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic">
+            </div>
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./assets/experience.png" alt="experience icon" class="icon">
+                        <h3>Experience</h3>
+                        <p>2+ years <br />Freelance Web Development</p>
+                        <p>3+ years <br />Worked at Brillante Travel Agency</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./assets/education.png" alt="education icon" class="icon">
+                        <h3>Education</h3>
+                        <p>B.S. Information Technology<br />Informatics Manila</p>
+                    </div>
+                    <br />
+                    <div class="text-container">
+                        <p style="color: black">My hobbies include collecting audiophile related gadgets like
+                            digital-to-analog-converters,
+                            amplifiers, and in-ear-monitors. I also have experience in setting up audio for small
+                            parties to moderate sized venues. I have always had a keen interest in computer. Due to
+                            years of tinkering and reading guides, I have had informal
+                            training in troubleshooting, fixing, and assembling computers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="arrow icon" class="icon-arrow" onclick="location.href='./#projects'">
+    </section>
+    <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="project-container">
+            <div class="project">
+                <img class="project-image" src="./assets/rps-sample-project.jpg" data-gif="assets/rps-gif.gif"
+                    alt="Rock Paper Scissors Project">
+                <h3>Rock-Paper-Scissors</h3>
+                <p>A simple interactive game of Rock-Papers-Scissors against CPU using JavaScript.</p>
+            </div>
+
+            <div class="project">
+                <img class="project-image" src="./assets/dbms-sample-project.png" data-gif="assets/dbms-gif.gif"
+                    alt="DBMS Project">
+                <h3>Data Management Webpage</h3>
+                <p>Barebones data management system for Calle Cafe. This includes user account registration and database
+                    management.</p>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon-arrow-p" onclick="location.href='./#contact'" />
+    </section>
+    <section id="contact">
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <form id="contact-form" onsubmit="return validateForm()">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                    <span class="error" id="nameError"></span>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <span class="error" id="emailError"></span>
+                </div>
+                <div class="input-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Enter your message"></textarea>
+                    <span class="error" id="messageError"></span>
+                </div>
+                <button type="submit" class="btn btn-color-1">Send Message</button>
+            </form>
+        </div>
+    </section>
+    <footer id="footer">
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#desktop-nav">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2025 Theo Gorospe. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
