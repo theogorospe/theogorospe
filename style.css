@@ -321,6 +321,11 @@ section {
     height: 2rem;
 }
 
+
+.icon-arrow:hover {
+    cursor: pointer;
+}
+
 .details-container {
     padding: 1.5rem;
     min-width: 250px;
@@ -436,6 +441,11 @@ section {
     right: -5rem;
     bottom: 2.5rem;
     height: 2rem;
+}
+
+
+.icon-arrow-p:hover {
+    cursor: pointer;
 }
 
 /*CONTACT SECTION*/
